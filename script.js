@@ -30,6 +30,12 @@ document.addEventListener('DOMContentLoaded', function () {
         downloadlinkCVI.click();
     });
 
+    const downloadCVE = document.getElementById('downloadCVE');
+    downloadCVE.addEventListener('click', function () {
+        const downloadlinkCVE = document.getElementById('downloadlinkCVE');
+        downloadlinkCVE.click();
+    });
+
 
 });
 
@@ -56,3 +62,4 @@ FormularioContacto.addEventListener('enviar',function (event) {
         console.error('Error al enviar el formulario:', error);
     });
 });
+
