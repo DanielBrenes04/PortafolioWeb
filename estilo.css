@@ -4,9 +4,9 @@ body, h1, h2, h3, p, ul, li {
 }
 
 body {
-    font-family: 'Roboto', Arial, sans-serif; /* Use Roboto font first, fallback to Arial */
-    background-color: #f0f0f0; /* Grey background color */
-    text-align: center; /* Center all text */
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f0f0f0; 
+    text-align: center; 
 }
 
 header {
@@ -16,7 +16,7 @@ header {
 }
 
 nav {
-    text-align: right; /* Center the navigation bar to the right */
+    text-align: right;
 }
 
 nav ul {
@@ -59,7 +59,7 @@ footer {
     cursor: pointer;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-    z-index: 999; /* Set a high z-index to ensure it stays on top */
+    z-index: 999; 
 }
 
 .navbar .nav-item {
@@ -79,3 +79,38 @@ footer {
 .navbar-toggler:hover {
     background-color: grey;
 }
+
+.acercami-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.acercami-text {
+    flex: 1;
+    text-align: left;
+    padding-right: 20px; 
+}
+
+.acercami-image {
+    flex: 1;
+    text-align: right;
+    padding-left: 20px; 
+}
+
+
+@media (max-width: 568px) {
+    .acercami-section {
+        flex-direction: column;
+    }
+    .acercami-text,
+    .acercami-image {
+        padding: 0;
+    }
+}
+
+
+
+
+
+
