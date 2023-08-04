@@ -1,0 +1,81 @@
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif; /* Use Roboto font first, fallback to Arial */
+    background-color: #f0f0f0; /* Grey background color */
+    text-align: center; /* Center all text */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+nav {
+    text-align: right; /* Center the navigation bar to the right */
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+main {
+    padding: 10rem; 
+    padding-top: 8rem;
+    padding-left: 12rem; 
+    padding-right: 12rem; 
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    font-size: 34px;
+    padding: 10px;
+    width: 20p;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 999; /* Set a high z-index to ensure it stays on top */
+}
+
+.navbar .nav-item {
+    color: black;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.navbar .nav-item .nav-link:hover {
+    border: 1px solid green;
+    background-color: gray;
+}
+
+.navbar-toggler {
+    background-color: white;
+}
+
+.navbar-toggler:hover {
+    background-color: grey;
+}
