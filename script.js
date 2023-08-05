@@ -12,54 +12,32 @@ function scrollToTop() {
 window.addEventListener('scroll', toggleScrollToTopButton);
 
 document.addEventListener('DOMContentLoaded', function () {
-    
-    const downloadCWI = document.getElementById('downloadCWI');
-    downloadCWI.addEventListener('click', function () {
-        const downloadlinkCWI = document.getElementById('downloadlinkCWI');
-        downloadlinkCWI.click();
-    });
-
-    const downloadCWE = document.getElementById('downloadCWE');
-    downloadCWE.addEventListener('click', function () {
-        const downloadlinkCWE = document.getElementById('downloadlinkCWE');
-        downloadlinkCWE.click();
-    });
-        const downloadCVI = document.getElementById('downloadCVI');
-    downloadCVI.addEventListener('click', function () {
-        const downloadlinkCVI = document.getElementById('downloadlinkCVI');
-        downloadlinkCVI.click();
-    });
-
-    const downloadCVE = document.getElementById('downloadCVE');
-    downloadCVE.addEventListener('click', function () {
+    const downloadButtonCVE = document.getElementById('downloadButtonCVE');
+    downloadButtonCVE.addEventListener('click', function () {
         const downloadlinkCVE = document.getElementById('downloadlinkCVE');
         downloadlinkCVE.click();
     });
-
-
 });
 
-const FormularioContacto = document.getElementById('Formulario-Contacto');
+emailjs.init('user_BlStsLsi63HRURB9V');
 
-FormularioContacto.addEventListener('enviar',function (event) {
-    event.preventDefault()
+document.getElementById('Formulario-Contacto').addEventListener('enviar', function(event) {
+  event.preventDefault();
 
-    const datosForm = new  FormData(FormularioContacto);
+  const formData = {
+    nombre: document.getElementById('nombre').value,
+    apellido: document.getElementById('apellido').value,
+    email: document.getElementById('email').value,
+    telefono: document.getElementById('telefono').value,
+    adress: document.getElementById('adress').value,
+    message: document.getElementById('message').value,
+  };
 
-    datosForm.append('subject', 'Contacto desde formulario');
-
-    fetch('/', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: new URLSearchParams(datosForm).toString(),
-    })
-    .then((response) => {
-        console.log('Formulario enviado');
-    })
-    .catch((error) => {
-        console.error('Error al enviar el formulario:', error);
+  emailjs.send('service_tdp20tc', 'template_jcs6cnl', formData)
+    .then(function(response) {
+      console.log('Email sent successfully:', response);
+    }, function(error) {
+      console.log('Error sending email:', error);
     });
 });
 

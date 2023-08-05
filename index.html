@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="imagenes/Favicon.png">
     <title>Mi Portfolio</title>
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="estilo.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -49,18 +51,13 @@
     <main>
       <section id="acercami" class="acercami-section">
         <div class="acercami-text">
-            <h1>Acerca de mi</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-            <a id="downloadlinkCWI" href="pdfs/Cotizcion WebENG.pdf" download style="display: none;">Download PDF</a>
-            <a id="downloadlinkCWE" href="pdfs/Cotizcion WebESP.pdf" download style="display: none;">cotizacion web en español</a>
-            <a id="downloadlinkCVI" href="pdfs/CurriculumVitaeENG.pdf" download style="display: none;">curriculum vitae en ingles</a>
-            <a id="downloadlinkCVE" href="pdfs/CurriculumVitaeESP.pdf" download style="display: none;">curriculum vitae en español</a>
-            <p>Click <span id="downloadCWI">→aqui←</span> para descargar la cotizacion web en ingles</p>
-            <p>Click <span id="downloadCWE">→aqui←</span> para descargar la cotizacion web en español</p>
-            <p>Click <span id="downloadCVI">→aqui←</span> para descargar el curriculum vitae en ingles</p>
-            <p>Click <span id="downloadCVE">→aqui←</span> para descargar el curriculum vitae en español</p>
-        </div>
+          <h1>Acerca de mi</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      
+          <a id="downloadlinkCVE" href="pdfs/CurriculumVitaeESP.pdf" download style="display: none;">curriculum vitae en español</a>
+      
+          <button id="downloadButtonCVE">Descargar PDF</button>
+      </div>
 
             <div class="acercami-image">
               <img src="imagenes/Danib.jpg" alt="Profile Picture">
@@ -202,7 +199,7 @@
         </section>
 
         </section>
-        <form id="Formulario-Contacto" netlify>
+        <form id="Formulario-Contacto">
           <label for="nombre">Nombre:</label>
           <input type="text" id="nombre" name="nombre" required>
 
