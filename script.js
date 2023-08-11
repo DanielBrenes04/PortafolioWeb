@@ -19,9 +19,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-emailjs.init('user_BlStsLsi63HRURB9V');
 
-document.getElementById('Formulario-Contacto').addEventListener('enviar', function(event) {
+document.getElementById('Formulario-Contacto').addEventListener('submit', function(event) {
   event.preventDefault();
 
   const formData = {
@@ -33,11 +32,31 @@ document.getElementById('Formulario-Contacto').addEventListener('enviar', functi
     message: document.getElementById('message').value,
   };
 
-  emailjs.send('service_tdp20tc', 'template_jcs6cnl', formData)
+    for (const key in formData) {
+      if (formData.hasOwnProperty(key)) {
+        formData.message += `${key}: ${formData[key]}\n`;
+      }
+    }
+
+  emailjs.send('service_tdp20tc', 'template_jcs6cnl', formData,'w7OyXhOEcn-8Qozao')
     .then(function(response) {
       console.log('Email sent successfully:', response);
     }, function(error) {
       console.log('Error sending email:', error);
     });
+    alert('Form submitted successfully!');
 });
 
+document.querySelectorAll('.smooth-scroll').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    
+    const target = document.querySelector(link.getAttribute('href'));
+    const offset = 80;
+    
+    window.scrollTo({
+      top: target.offsetTop - offset,
+      behavior: 'smooth'
+    });
+  });
+});
