@@ -132,6 +132,10 @@ nav ul li a {
 
 @media (max-width: 568px) {
 
+    main {
+        padding: 6rem 1rem;
+    }
+
     .acercami-image,
     .acercami-text {
         padding: 0;
