@@ -6,9 +6,29 @@
 }
 
 .acercami-image {
-    flex: 0 0 25%;
+    flex: 0 0 30%;
     padding-left: 20px;
-    text-align: right;
+    text-align: left;
+    position: relative;
+    width: 300px; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height as needed */
+}
+
+.image-container {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .acercami-section {
@@ -159,13 +179,16 @@ nav ul li a {
         padding: 6rem 1rem;
     }
 
-    .acercami-image,
-    .acercami-text {
-        padding: 0;
-    }
-
     .acercami-section {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 980px) {
+    .acercami-image {
+        flex: 0 0 50%; 
+        padding-left: 0; 
+        text-align: center; 
     }
 }
 
