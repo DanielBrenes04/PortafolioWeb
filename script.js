@@ -34,7 +34,7 @@ document.getElementById('Formulario-Contacto').addEventListener('submit', functi
 
     for (const key in formData) {
       if (formData.hasOwnProperty(key)) {
-        formData.message += `${key}: ${formData[key]}\n`;
+        formData.message += `\n${key}: ${formData[key]}\n`;
       }
     }
 

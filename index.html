@@ -6,7 +6,7 @@
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="imagenes/Favicon.png">
-  <title>Mi Portfolio</title>
+  <title>Portfolio Profesional</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="estilo.css">
@@ -17,7 +17,7 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top" style="background-color: #808080;">
       <div class="container">
-        <a class="navbar-brand" href="#inicio" style="color: white;">Mi Portfolio</a>
+        <a class="navbar-brand" href="#inicio" style="color: white;">Portafolio de Daniel Brenes Fonseca</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -78,16 +78,24 @@
 
       <section id="habilidades" class="py-3 mt-5">
         <div class="container">
-          <h2>Habilidades tecnicas y blandas</h2>
+          <h2>Habilidades técnicas y blandas</h2>
           <div class="row">
-            <div class="col">
-              <h3>Tecnicas</h3>
-              <p>Contribuir a una empresa con el desarrollo de aplicaciones web usando tecnologías de vanguardia.</p>
+            <div class="col-md-6">
+              <h3>Técnicas</h3>
+              <ul class="habilidades">
+                <li>-Conocimiento amplio de lenguajes y metodologías de programación</li>
+                <li>-Empleo de metodologías y conocimientos para la solución de problemas</li>
+                <li>-Control sobre plataformas de control de versiones como GitHub o</li>
+                <li> Azure DevOps para agilizar el desarrollo de programas</li>
+              </ul>
             </div>
-            <div class="col">
+            <div class="col-md-6">
               <h3>Blandas</h3>
-              <p>Ser reconocido en el mercado laboral por brindar soluciones eficientes acopladas a las exigencias de
-                una empresa.</p>
+              <ul class="habilidades">
+                <li>-Comunicación y coordinación con equipos de trabajo</li>
+                <li>-Adaptabilidad para situaciones de trabajo con diferentes condiciones</li>
+                <li>-Aprender conocimientos nuevos que sean vitales para mi profesión</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -192,8 +200,8 @@
               Linkedin</a>
           </div>
           <form id="Formulario-Contacto">
-            <div class="row">
-              <div class="col-md-6">
+            <div class="form-group">
+              <label for="nombre">
                 <div class="form-group">
                   <label for="nombre">Nombre:</label>
                   <input type="text" class="form-control" id="nombre" name="nombre" required>
@@ -206,8 +214,6 @@
                   <label for="email">Correo Electrónico:</label>
                   <input type="email" class="form-control" id="email" name="email" required>
                 </div>
-              </div>
-              <div class="col-md-6">
                 <div class="form-group">
                   <label for="telefono">Teléfono:</label>
                   <input type="number" class="form-control" id="telefono" name="telefono" required>
@@ -220,9 +226,7 @@
                   <label for="message">Mensaje:</label>
                   <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
                 </div>
-              </div>
-            </div>
-            <button type="submit" class="btn btn-custom">Enviar</button>
+                <button type="submit" class="btn btn-custom">Enviar</button>
           </form>
           <div class="elfsight-app-56d9770b-8b32-4f88-90c6-432108d8283b"></div>
         </div>
@@ -234,8 +238,10 @@
     <span>&uarr;</span>
   </div>
 
-  <footer class="bg-light text-center py-3">
-    <p>Test</p>
+  <footer class="bg-dark text-white py-3">
+    <div class="container">
+      <p>&copy; 2023 Daniel Brenes Fonseca. Proyecto Portafolio Personal.</p>
+    </div>
   </footer>
 
   <!-- Link JS y jQuery-->
